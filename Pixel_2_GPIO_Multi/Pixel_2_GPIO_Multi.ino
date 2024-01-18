@@ -29,8 +29,8 @@ int rgb_th = 80;
 
 int readRGB(int pin)
 {
-  unsigned long H = pulseIn(pin, HIGH, 2000);
-  unsigned long L = pulseIn(pin, LOW, 2000);
+  unsigned long H = pulseIn(pin, HIGH, 2100);
+  unsigned long L = pulseIn(pin, LOW, 2100);
   if (H == 0 || L == 0){return  digitalRead(pin) ? 100 : 0;}
   return (100 * H) / (H + L);
 }
